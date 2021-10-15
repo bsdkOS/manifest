@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="bsdkos"
+          fetch="https://github.com/bsdkOS"
+          revision="twelve" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="bsdkos" />
+  <project path="frameworks/base" name="frameworks_base" remote="bsdkos" />
+  <project path="frameworks/native" name="frameworks_native" remote="bsdkos" />
+
+  <!-- General repos -->
+  <project path="manifest" name="manifest" remote="bsdkos" />
+  <project path="bionic" name="bionic" remote="bsdkos" />
+  <project path="build/make" name="build" remote="bsdkos" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="bsdkos" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- External repos -->
+  <project path="external/selinux" name="external_selinux" remote="bsdkos" />
+  <project path="external/tinycompress" name="external_tinycompress" remote="bsdkos" />
+
+  <!-- Device repos -->
+  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="bsdkos" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" remote="bsdkos" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" groups="qcom,pdk-qcom" remote="bsdkos" />
+  <project path="device/qcom/sepolicy-legacy" name="device_qcom_sepolicy-legacy" groups="qcom,pdk-qcom" remote="bsdkos" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" groups="qcom,pdk-qcom" remote="bsdkos" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="bsdkos" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="bsdkos" />
+
+  <!-- Hardware repos -->
+  <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="bsdkos" />
+  <project path="hardware/qcom-caf/sm8250/display" name="hardware_qcom-caf_sm8250_display" groups="pdk-qcom,qcom,qcom_display" remote="bsdkos" />
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="bsdkos" />
+
+  <!-- System repos -->
+  <project path="system/core" name="system_core" remote="bsdkos" />
+  <project path="system/libhwbinder" name="system_libhwbinder" remote="bsdkos" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="bsdkos" />
+
+  <!-- Vendor repos -->
+  <project path="vendor/bsdk" name="vendor_bsdk" remote="bsdkos" />
+  <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="bsdkos" />
+  <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" groups="qcom,pdk-qcom" remote="bsdkos" />
+
+</manifest>
