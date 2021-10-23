@@ -48,6 +48,7 @@
 
   <!-- Hardware repos -->
   <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="bsdkos" />
+  <project path="hardware/qcom-caf/sm8250/audio" name="hardware_qcom-caf_sm8250_audio" groups="qcom,qcom_audio,pdk-qcom" remote="bsdkos" />
   <project path="hardware/qcom-caf/sm8250/display" name="hardware_qcom-caf_sm8250_display" groups="pdk-qcom,qcom,qcom_display" remote="bsdkos" />
   <project path="hardware/qcom-caf/wlan" name="hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="bsdkos" />
 
