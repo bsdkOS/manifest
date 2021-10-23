@@ -5,6 +5,10 @@
           fetch="https://github.com/bsdkOS"
           revision="twelve" />
 
+  <remote  name="bsdkos-gitlab"
+           fetch="https://gitlab.com/blankaf"
+           revision="twelve" />
+
   <!-- Framework repos -->
   <project path="frameworks/av" name="frameworks_av" remote="bsdkos" />
   <project path="frameworks/base" name="frameworks_base" remote="bsdkos" />
@@ -56,5 +60,6 @@
   <project path="vendor/bsdk" name="vendor_bsdk" remote="bsdkos" />
   <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="bsdkos" />
   <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" groups="qcom,pdk-qcom" remote="bsdkos" />
+  <project path="vendor/google/gms" name="vendor_google_gms" remote="bsdkos-gitlab" />
 
 </manifest>
