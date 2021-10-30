@@ -62,5 +62,6 @@
   <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="bsdkos" />
   <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" groups="qcom,pdk-qcom" remote="bsdkos" />
   <project path="vendor/google/gms" name="vendor_google_gms" remote="bsdkos-gitlab" />
+  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="bsdkos" />
 
 </manifest>
